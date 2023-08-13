@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <aside class="sidebar">
+            <div class="sidebar__header">
+                <img class="header__logo" src="./img/logo.png" alt="">
+            </div>
+
+            <div class="sidebar__options">
+                <input 
+                    onclick="return KeyboardLayoutOptionClick(event);" 
+                    value="English" 
+                    name="KeyboardLayoutOption" 
+                    type="radio"
+                    id="option__english">
+                <label class="option_label" for="option__english">English</label>
+
+                <input 
+                    onclick="return KeyboardLayoutOptionClick(event);" 
+                    value="Bijoy" 
+                    name="KeyboardLayoutOption" 
+                    type="radio"
+                    id="option__bijoy">
+                <label class="option_label" for="option__bijoy">Bijoy</label>
+
+                <input 
+                    onclick="return KeyboardLayoutOptionClick(event);" 
+                    checked="checked" 
+                    value="Somewhere-in"
+                    name="KeyboardLayoutOption" 
+                    type="radio"
+                    id="option__fontatic">
+                <label class="option_label" for="option__fontatic">Fontatic</label>
+            </div>
+
+            <div class="sidebar__function">
+                <div class="function__font">
+                    <button class="funciton_button" id="font__decrease" onclick="return  decreaseFont()">-</button>
+                    <p id="font__value">16</p>
+                    <button class="funciton_button" id="font__increase" onclick="return increaseFont()">+</button>
+                </div>
+            </div>
+
+
+
+        </aside>
+        <section class="writing">
+            <textarea 
+                name="TextField" 
+                class="inputArea" id="textfield" 
+                style="font-size: 12pt; font-family: SolaimanLipi;"
+                onkeypress="return KeyBoardPress(event);" 
+                onkeydown="return KeyBoardDown(event);"></textarea>
+        </section>
+    </main>
+    <script src="js/layout.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

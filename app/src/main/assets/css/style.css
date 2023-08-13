@@ -1,0 +1,138 @@
+:root {
+    --color-sidebar: #F0F3F4;
+    --color-border: #dbdbdb;
+    --color-selected: #081225;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.25%;
+}
+
+body {
+    font-size: 1.6rem;
+    height: 100vh;
+    font-family: roboto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked+.option_label {
+    background-color: var(--color-selected);
+    color: white;
+}
+
+.img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* MAIN AREA START */
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+/*SIDEBAR START*/
+.sidebar {
+    background-color: var(--color-sidebar);
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__header {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header__logo {
+    height: 5rem;
+}
+
+.sidebar__options {
+    margin-top: 1rem;
+}
+
+.option__holder {
+    display: flex;
+    align-items: center;
+}
+
+.option_label {
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    transition: background-color 0.3s ease;
+}
+
+.option_label:hover {
+    background-color: lightgray;
+}
+
+.sidebar__function {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.function__font {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 5rem;
+    border: 1px solid var(--color-border);
+
+
+}
+
+.funciton_button {
+    font-size: 2rem;
+    padding: 0 1rem;
+    background-color: transparent;
+    border: 0;
+
+}
+
+#font__value {
+    padding: 0 1rem;
+}
+
+#font__decrease {
+    font-size: 3rem;
+}
+
+/*WRITING AREA START*/
+.writing {
+    width: 100%;
+}
+
+.inputArea {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 2rem;
+    font-family: roboto;
+}
+
+.inputArea:focus {
+    outline: none;
+}
